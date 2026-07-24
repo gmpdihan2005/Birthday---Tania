@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🎂 Happy Birthday Taniya ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#ff4b91,#ff80ab,#ffd6e8);
+
+overflow:hidden;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.card{
+
+width:95%;
+
+max-width:1100px;
+
+height:90vh;
+
+background:white;
+
+border-radius:25px;
+
+overflow:hidden;
+
+display:flex;
+
+box-shadow:0 20px 50px rgba(0,0,0,.3);
+
+animation:pop 1s ease;
+
+position:relative;
+
+z-index:10;
+
+}
+
+@keyframes pop{
+
+0%{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+.left{
+
+width:45%;
+
+height:100%;
+
+overflow:hidden;
+
+}
+
+.left img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+.right{
+
+width:55%;
+
+padding:40px;
+
+overflow-y:auto;
+
+}
+
+.right h1{
+
+color:#ff0066;
+
+font-size:40px;
+
+margin-bottom:15px;
+
+}
+
+.right h2{
+
+margin-top:18px;
+
+color:#ff3d7f;
+
+}
+
+.right p{
+
+margin-top:8px;
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#444;
+
+}
+
+.footer{
+
+margin-top:25px;
+
+font-size:26px;
+
+font-weight:bold;
+
+color:#ff0066;
+
+text-align:center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="left">
+
+<img src="taniya.jpg">
+
+</div>
+
+<div class="right">
+<h1>🎂 Happy Birthday Taniya ❤️</h1>
+
+<p>
+Today is all about celebrating someone truly special.
+May this birthday bring endless happiness, unforgettable memories,
+and every success you dream of.
+</p>
+
+<h2>👀 Your Eyes</h2>
+
+<p>
+Your eyes have a unique sparkle that speaks louder than words.
+They are full of kindness, confidence and warmth.
+</p>
+
+<h2>😊 Your Smile</h2>
+
+<p>
+Your smile is one of the most beautiful things about you.
+It has the power to brighten someone's entire day.
+</p>
+
+<h2>💇‍♀️ Your Hair</h2>
+
+<p>
+Your hairstyle perfectly matches your personality—
+simple, elegant and absolutely beautiful.
+</p>
+
+<h2>✨ Your Sense</h2>
+
+<p>
+Your sense of style and the way you carry yourself
+make you different from everyone else.
+</p>
+
+<h2>😎 Your Attitude</h2>
+
+<p>
+Your confidence, honesty and positive attitude
+make you even more attractive.
+Never lose that beautiful spirit.
+</p>
+
+<h2>💖 About You</h2>
+
+<p>
+You're an amazing person with a beautiful heart.
+May every dream come true and may your life always be
+filled with love, peace and happiness.
+</p>
+
+<div class="footer">
+
+🎉 Happy Birthday Once Again, Taniya ❤️🎂
+
+</div>
+
+</div>
+
+</div>
+<script>
+
+// 🎆 Fireworks on page load
+function launchFireworks() {
+const duration = 5000;
+const end = Date.now() + duration;
+
+(function frame() {
+confetti({
+particleCount: 8,
+angle: 60,
+spread: 70,
+origin: { x: 0 }
+});
+
+confetti({
+particleCount: 8,
+angle: 120,
+spread: 70,
+origin: { x: 1 }
+});
+
+if (Date.now() < end) {
+requestAnimationFrame(frame);
+}
+})();
+}
+
+launchFireworks();
+
+// ❤️ Floating Hearts
+for(let i=0;i<35;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.style.position="fixed";
+heart.style.left=Math.random()*100+"vw";
+heart.style.top=(100+Math.random()*20)+"vh";
+heart.style.fontSize=(20+Math.random()*25)+"px";
+heart.style.animation="floatUp "+(5+Math.random()*6)+"s linear infinite";
+heart.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(heart);
+
+}
+
+const style=document.createElement("style");
+
+style.innerHTML=@keyframes floatUp{ 0%{ transform:translateY(0); opacity:0; } 20%{ opacity:1; } 100%{ transform:translateY(-120vh); opacity:0; } };
+
+document.head.appendChild(style);
+
+// 🎂 Birthday Cake Popup
+setTimeout(()=>{
+
+alert("🎂 Happy Birthday Taniya! ❤️🎉\n\nMay all your dreams come true!");
+
+},2500);
+
+</script>
+
+</body>
+
+</html>
